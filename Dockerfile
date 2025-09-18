@@ -1,18 +1,5 @@
 # syntax=docker/dockerfile:1.7-labs
 
-FROM python:3.11-slim
-
-# Set the working directory inside the container
-WORKDIR /app
-
-# Copy the requirements file and install dependencies
-# This is a good practice for caching layers
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy your start.py file into the container
-COPY start.py .
-
 FROM python:3.13.2-alpine3.21 AS base
 
 ENV PYTHONFAULTHANDLER=1 \
