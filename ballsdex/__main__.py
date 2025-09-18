@@ -1,6 +1,3 @@
-from keep_alive import keep_alive
-keep_alive()
-
 import argparse
 import asyncio
 import functools
