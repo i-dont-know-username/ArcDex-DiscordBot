@@ -27,6 +27,9 @@ WORKDIR /code
 
 FROM base AS builder-base
 
+# Switch to the non-root user before installing Python packages
+USER ballsdex
+
 # Pillow build dependencies
 RUN apk add --no-cache gcc libc-dev
 
