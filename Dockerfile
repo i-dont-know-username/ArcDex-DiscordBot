@@ -41,4 +41,5 @@ COPY --from=builder-base --parents /usr/local/lib/python*/site-packages/ /
 USER ballsdex
 
 # Set the command to run your application
-CMD ["python", "start.py"]
+# The file is now in a subdirectory, so the path must be updated.
+CMD ["python", "ballsdex/start.py"]
